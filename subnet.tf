@@ -18,6 +18,16 @@ resource "aws_subnet" "public-subnet-c" {
   }
 }
 
+resource "aws_subnet" "public-subnet-d" {
+  vpc_id            = "${aws_vpc.vpc.id}"
+  cidr_block        = "${var.subnet["public-cidr-d"]}"
+  availability_zone = "${var.common["az-d"]}"
+
+  tags {
+    Name = "${var.common["prefix"]}-public-subnet-d"
+  }
+}
+
 resource "aws_subnet" "protected-subnet-a" {
   vpc_id            = "${aws_vpc.vpc.id}"
   cidr_block        = "${var.subnet["protected-cidr-a"]}"
@@ -38,6 +48,16 @@ resource "aws_subnet" "protected-subnet-c" {
   }
 }
 
+resource "aws_subnet" "protected-subnet-d" {
+  vpc_id            = "${aws_vpc.vpc.id}"
+  cidr_block        = "${var.subnet["protected-cidr-d"]}"
+  availability_zone = "${var.common["az-d"]}"
+
+  tags {
+    Name = "${var.common["prefix"]}-protected-subnet-d"
+  }
+}
+
 resource "aws_subnet" "private-subnet-a" {
   vpc_id            = "${aws_vpc.vpc.id}"
   cidr_block        = "${var.subnet["private-cidr-a"]}"
@@ -55,5 +75,15 @@ resource "aws_subnet" "private-subnet-c" {
 
   tags {
     Name = "${var.common["prefix"]}-private-subnet-c"
+  }
+}
+
+resource "aws_subnet" "private-subnet-d" {
+  vpc_id            = "${aws_vpc.vpc.id}"
+  cidr_block        = "${var.subnet["private-cidr-d"]}"
+  availability_zone = "${var.common["az-d"]}"
+
+  tags {
+    Name = "${var.common["prefix"]}-private-subnet-d"
   }
 }
