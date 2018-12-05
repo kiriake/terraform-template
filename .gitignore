@@ -1,0 +1,5 @@
+.envrc
+.python-version
+terraform.tfstate
+.git
+.terraform

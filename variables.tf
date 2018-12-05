@@ -15,7 +15,7 @@ variable "vpc" {
 
   default = {
     cidr = "10.0.0.0/16"
-    name = "main-vpc"
+    name = "foo-vpc"
   }
 }
 
@@ -31,6 +31,6 @@ variable "subnet" {
     protected-cidr-d = "10.0.5.0/24"
     private-cidr-a   = "10.0.6.0/24"
     private-cidr-c   = "10.0.7.0/24"
-    private-cidr-c   = "10.0.8.0/24"
+    private-cidr-d   = "10.0.8.0/24"
   }
 }
